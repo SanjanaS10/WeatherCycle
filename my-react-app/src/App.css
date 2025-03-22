@@ -1,0 +1,830 @@
+body {
+   
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #470525;
+  line-height: 1.6;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.logo {
+  width: 50px; /* Increase width */
+  height: 80px; /* Increase height */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px; /* Navbar height */
+  background-color: rgba(71, 2, 38, 0.9);
+  box-shadow: 0 2px 10px rgba(248, 240, 240, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  animation: slideDown 1s ease-in-out;
+}
+
+.navbar-logo img {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.1);
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin: 0 20px;
+}
+
+.navbar-links a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #f7f0f0;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #edadda;
+}
+
+/* Hero Section Styles */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  min-width: 100vw;
+  min-height: 100vh; /* Ensure it covers at least the viewport height */
+  background-image: url('C:\Users\sanjana\Desktop\WTprojs\women-health-climate2\my-react-app\src\assets\bgi.jpeg');  
+  background-size:100%; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating */
+  color: #f5f3f4;
+  text-align: center;
+  margin-top: 80px; /* Account for Navbar height */
+  overflow: hidden;
+}
+ 
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, hsla(332, 39%, 87%, 0.304), rgba(247, 212, 226, 0.216));
+  z-index: 1;
+} 
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+ 
+.hero-subtitle {
+  padding-left: 200px;
+  color: #eb98b9;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: #750f4e;
+  background-color: #ffc3db;
+   
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #fabed2;
+  transform: scale(1.1);
+}
+
+/* Features Section Styles */
+/**/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap');
+
+.features {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #fce4ec, #f8bbd0); /* Soft pink gradient */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  background-image: url('C:\Users\sanjana\Desktop\WTprojs\women-health-climate2\my-react-app\src\assets\bgimginv.jpeg'); 
+  background-size:100%; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+}
+ 
+
+/* Section Title */
+.features h2 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #ef4f8a; /* Deep pink */
+  margin-bottom: 20px;
+  
+  letter-spacing: 1.5px;
+  position: relative;
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Decorative Underline */
+.features h2::after {
+  content: "";
+  width: 100px;
+  height: 4px;
+  background: #f697b8;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Section Description */
+.features p {
+  
+  font-size: 1.3rem;
+  color: #641031;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.9;
+  font-weight: 300;
+}
+
+#aff{
+  background-image: url('C:\Users\sanjana\Desktop\WTprojs\women-health-climate2\my-react-app\src\assets\bgimg.jpeg'); 
+  background-size:100%; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+  padding-left: 550px;
+
+}
+
+/* Floating Decorative Elements */
+.features::before
+.features::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  opacity: 0.6;
+  filter: blur(40px);
+}
+
+.features::before {
+  top: 50px;
+  left: 30px;
+}
+
+.features::after {
+  bottom: 50px;
+  right: 30px;
+}
+
+/* Button inside the section */
+.features .features-btn {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(255, 20, 147, 0.3);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Button Hover */
+.features .features-btn:hover {
+  background: linear-gradient(135deg, #ff1493, #c2185b);
+  box-shadow: 0 8px 25px rgba(255, 20, 147, 0.5);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .features h2 {
+    font-size: 2.2rem;
+  }
+
+  .features p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .features .features-btn {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+}
+
+/**/
+.features2 {
+  padding: 100px 20px;
+  background-image: url('C:\Users\sanjana\Desktop\WTprojs\women-health-climate2\my-react-app\src\assets\bgiinv.jpeg');
+  background-size:100%; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+  text-align: center;
+ /* background: linear-gradient(to bottom, hsla(324, 81%, 94%, 0.962), rgba(244, 142, 183, 0.819));*/
+}
+
+
+ 
+
+.features3 {
+  background-image: url('C:\Users\sanjana\Desktop\WTprojs\women-health-climate2\my-react-app\src\assets\bgiinv2.jpeg');
+  background-size:100%; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+  padding: 100px 20px;
+  background-color: #f7d7e1;
+  text-align: center;
+}
+/**//**/
+.features h2 {
+  font-size: 3.8rem;
+  margin-bottom: 60px;
+  color: #a25d6a;
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  color: #3b0c06e7;
+  font-style: normal;
+}
+
+
+/**/
+
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* Feature Card Styling */
+.feature-card {
+  width: 320px;
+  padding: 30px;
+  
+  background: linear-gradient(135deg, #fce4ec, #f8bbd0); /* Soft pink gradient */
+  box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.3); /* Soft pink glow */
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effect */
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0px 15px 40px rgba(255, 105, 180, 0.4); /* Enhanced glow */
+}
+
+/* Title inside the card */
+.feature-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d81b60; /* Deep pink */
+  margin-bottom: 10px;
+}
+
+/* Card content text */
+.feature-card p {
+ 
+  font-size: 1rem;
+  color: #5e0524; 
+  line-height: 1.6;
+}
+
+/* Button inside the card */
+.feature-card .card-button {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 20, 147, 0.3);
+}
+
+/* Button hover effect */
+.feature-card .card-button:hover {
+  background: linear-gradient(135deg, #ff1493, #c2185b);
+  box-shadow: 0 5px 20px rgba(255, 20, 147, 0.5);
+  transform: scale(1.05);
+}
+
+/* Decorative Floating Elements */
+.feature-card::before,
+.feature-card::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  opacity: 0.6;
+  filter: blur(30px);
+}
+
+.feature-card::before {
+  top: -30px;
+  left: -30px;
+}
+
+.feature-card::after {
+  bottom: -30px;
+  right: -30px;
+}
+
+
+/**/
+/* Existing styles... */
+
+.feature2-cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items at the top */
+  gap: 78px; /* Reduced gap between card and image */
+  flex-wrap: wrap;
+}
+
+.feature2-card {
+  width: 450px;
+  height: 500px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature2-card:hover {
+  transform: translateY(-5px); /* Lift the card on hover */
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+#image1 {
+  margin-top: 35px;
+  width: 450px;
+  height: 480px;
+  border-radius: 35px;
+  object-fit: cover;
+  border: 4px solid #fff; /* Add a white border */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+#image1:hover {
+  transform: scale(1.02); /* Slightly enlarge the image on hover */
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+  border-color:#6d1f46; /* Change border color on hover */
+}
+
+/* Optional: Add a fade-in animation for the image */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#image1 {
+  animation: fadeIn 1s ease-in-out; /* Apply fade-in animation */
+}
+
+
+#image2 {
+  margin-top: 35px;
+  width: 450px;
+  height: 480px;
+  border-radius: 35px;
+  object-fit: cover;
+  border: 4px solid #fff; /* Add a white border */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+#image2:hover {
+  transform: scale(1.02); /* Slightly enlarge the image on hover */
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+  border-color: #6d1f46; /* Change border color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .feature2-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .feature2-card,
+  #image1 {
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Auto height to maintain aspect ratio */
+  }
+}
+ 
+@media (max-width: 768px) {
+  .feature-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+#f2{
+  padding-right: 550px;
+
+}
+
+#f3{
+  padding-left: 550px;
+
+
+}
+
+
+#weathereffects{
+  text-align: center;
+}
+
+
+
+/* Existing styles... */
+
+.feature3-cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items at the top */
+  gap:78px; /* Same spacing as feature2 */
+  flex-wrap: wrap;
+}
+
+.feature3-card {
+  
+  
+  width: 450px;
+  height: 500px;
+  padding: 35px;
+  background-color: #fff;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature3-card:hover {
+  transform: translateY(-5px); /* Lift the card on hover */
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for feature3 */
+@media (max-width: 768px) {
+  .feature3-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  
+  /* Optional: Add a fade-in animation for the image */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  #image2 {
+    animation: fadeIn 1s ease-in-out; /* Apply fade-in animation */
+  }
+
+  
+
+
+  .feature3-card,
+  #image1 {
+    
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Auto height to maintain aspect ratio */
+  }
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.feature-card p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Footer Styles */
+.footer {
+  width: 100vw;
+  background-color:rgba(71, 2, 38, 0.9);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.footer-section h4 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #f9a3cf;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+ 
+
+/**/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Navbar Slide-Down Animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Hero Section Background Animation */
+@keyframes bgScroll {
+  from {
+    background-position: center top ;
+  }
+  to {
+    background-position: center ;
+  }
+}
+ 
+.hero {
+  animation: bgScroll 5s linear infinite alternate;
+}
+
+/* Call-To-Action Button Pulse Animation */
+.cta-button {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+ 
+
+.feature-card:hover,
+.feature2-card:hover,
+.feature3-card:hover {
+  animation: glow 0.5s ease-in-out;
+  box-shadow: 0px 12px 30px rgba(246, 132, 162, 0.4);
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  to {
+    box-shadow: 0px 12px 30px rgba(254, 195, 207, 0.6);
+  }
+} 
+
+
+/*features css*/
+/* Features Page Styles */
+ 
+
+/*features css end*/
+
+/* 🔹 Navbar Hover Glow Effect */
+.navbar-links a {
+  position: relative;
+}
+
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #edadda;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-links a:hover::after {
+  transform: scaleX(1);
+}
+
+/* 🔹 Feature Cards - Glass Effect */
+.feature-card, .feature2-card, .feature3-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover, .feature2-card:hover, .feature3-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Hero Section Soft Glow */
+
+
+@keyframes textGlow {
+  0% { text-shadow: 0 0 10px #f9f1f4; }
+  100% { text-shadow: 0 0 20px #f473b3; }
+}
+
+/* 🔹 CTA Button 3D Effect */
+.cta-button {
+ margin-left: 160px;
+  border: #7d084e;
+  box-shadow: 0 5px 15px rgba(255, 0, 106, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(252, 206, 226, 0.5);
+}
+
+/* 🔹 Footer Enhancement */
+.footer {
+  
+  border-top: 3px solid #edadda;
+}
+
+.footer a:hover {
+  color: #f7f0f0;
+  text-decoration: underline;
+}
+
+.hero-title {
+  /*font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;*/
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  color: #3b0c06e7;
+  font-style: normal;
+}
+
+.hero-title {
+  padding-left: 220px;
+  font-size: 8rem;
+   
+   
+  margin-bottom: 20px;
+  animation: bounce 2s infinite;
+}
+.hero-title {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  animation: textGlow 2s infinite alternate;
+}

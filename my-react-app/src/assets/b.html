@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spurvo - Turn Customer Feedback Into Your Product’s Secret Weapon</title>
+    
+    <!-- Meta Description -->
+    <meta name="description" content="Spurvo helps you gather, prioritize, and act on customer feedback effortlessly. Simplify the process and deliver what users really need." />
+
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="customer feedback, product roadmap, user insights, feature requests, Spurvo, feedback management, AI feedback tool" />
+
+    <!-- Author -->
+    <meta name="author" content="Spurvo Team" />
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Spurvo - Turn Customer Feedback Into Your Product’s Secret Weapon" />
+    <meta property="og:description" content="Gather, prioritize, and act on customer feedback to build better products. Get early access to Spurvo today!" />
+    <meta property="og:image" content="https://spurvo.com/images/logo.svg" />
+    <meta property="og:url" content="https://spurvo.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Spurvo - Turn Customer Feedback Into Your Product’s Secret Weapon" />
+    <meta name="twitter:description" content="Gather, prioritize, and act on customer feedback to build better products. Get early access to Spurvo today!" />
+    <meta name="twitter:image" content="https://spurvo.com/images/logo.svg" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://spurvo.com" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <!-- Hotjar Tracking Code for https://spurvo.com -->
+
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="./images/logo.svg" alt="Logo" class="logo-icon" />
+        </a>
+
+        <!-- Hamburger Menu for Mobile -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+<div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav mx-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="#features">Features</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://www.blog.spurvo.com/" target="_blank">Blog</a>
+    </li>
+    <!-- <li class="nav-item">
+      <a class="nav-link" href="#get-access">Get In Touch</a>
+    </li> -->
+  </ul>
+  <!-- Call-to-Action Button -->
+  <a href="#" id="navOpenPopup" class="btn btn-primary btn-rounded">Get Early Access</a>
+</div>
+
+
+        
+      </div>
+    </nav>
+    <section class="hero ">
+      <!-- <img
+          src="./images/leftHeroIcon.svg"
+          class="left-hero-icon"
+          alt="leftHeroIcon"
+        /> -->
+      <div class="hero-content container">
+        
+        <div class="animated-gradient"></div>
+        <div class="feedback-button">
+          <span class="icon">
+            <img src="/images/message.svg" />
+          </span>
+         <span class="gradient-text ">  Let the feedbacks flow in</span>
+
+        </div>
+        <h2>
+          Turn <span class="primary-hero-text">Customer Feedback</span> Into <br />
+          Your Product’s Secret Weapon
+        </h2>
+        <p>
+          Gather feedback, prioritize key insights, and act on them to build
+          better products with Spurvo. Simplify the process and deliver what
+          users really need.
+        </p>
+        <div class="input-container">
+
+          <a id="openPopup" class="btn btn-primary btn-rounded input-button"
+            >Get Early Access</a
+          >
+       
+        </div>
+        <div id="popup" class="popup hidden">
+          <div class="popup-content">
+            <div class="popup-head">
+              <button id="closePopup" class="close-btn">&times;</button>
+              <div class="d-flex flex-column">
+                <h2 class="popup-title">Get Early Access</h2>
+                <p class="popup-header-p"> Get in touch with us to discuss your needs and explore collaboration.</p>
+              </div>
+            </div>
+            <form id="earlyAccessForm">
+              <div class="d-flex">
+                <div class="form-group">
+                  <label for="fullName">Full Name</label>
+                  <input type="text" id="fullName" placeholder="John Maverick" required>
+                </div>
+                <div class="form-group">
+                  <label for="companyName">Company Name</label>
+                  <input type="text" id="companyName" placeholder="Acme" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" placeholder="john@example.com" required>
+              </div>
+              <div class="form-group my-4">
+                <label>Are you willing to participate in a 15-min feedback call?</label>
+                <div class="d-flex align-items-center" style="gap: 15px;">
+                  <label>
+                    <input type="radio" name="feedbackCall" value="yes" required> Yes, I’d like to
+                  </label>
+                  <label>
+                    <input type="radio" name="feedbackCall" value="no" required> No
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>
+                  <input type="checkbox" id="subscribe"> Yes, I’d like to receive news and updates by email
+                </label>
+              </div>
+              
+              <!-- Submit button with spinner inside -->
+              <button type="submit" class="submit-btn" id="submitButton">
+                <span id="submitText">Submit</span>
+                <div id="loadingSpinner" class="spinner-border spinner-border-sm" role="status" style="display: none; margin-left: 10px;">
+                  <span class="sr-only"></span>
+                </div>
+              </button>
+            </form>
+            
+            <script>
+              document.getElementById('earlyAccessForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+            
+                const submitButton = document.getElementById('submitButton');
+                const submitText = document.getElementById('submitText');
+                const spinner = document.getElementById('loadingSpinner');
+            
+                // Show spinner and change button text
+                submitText.style.display = 'none';
+                spinner.style.display = 'inline-block';
+                submitButton.disabled = true;
+            
+                // Simulate form submission delay (e.g., API call)
+                setTimeout(() => {
+                  // Reset button state
+                  spinner.style.display = 'none';
+                  submitText.style.display = 'inline';
+                  submitButton.disabled = false;
+                  
+                  // Here you can handle form submission, e.g., send data to a server
+                  alert('Form submitted successfully!');
+                }, 3000); // Simulating a 3-second delay
+              });
+            </script>
+            
+            
+          </div>
+        </div>
+        <!-- <img
+        src="./images/leftHeroIcon.svg"
+        class="right-hero-icon"
+        alt="rightHeroIcon"
+        style="border-bottom-left-radius: 25%;"
+      /> -->
+      </div>
+    </section>
+    <section class="section-two">
+      
+      <div class="tabs container gradient-border">
+        <div class="gradient-border-inner">
+          <div class="tab" data-content="feedback-content">
+            <img
+              class="tab-icon feedback-icon"
+              src="./images/section_two/feedbacks.svg"
+            />
+          <div class="d-flex flex-column ">
+            <p class="title">Feedbacks</p>
+            <p class="subtitle">Collect user insights</p>
+          </div>
+          </div>
+          <div class="tab" data-content="roadmaps-content">
+            <img
+              class="tab-icon roadmap-icon"
+              src="./images/section_two/roadmapsIcon.svg"
+            />
+            <div class="d-flex flex-column ">
+            <p class="title">Roadmaps</p>
+            <p class="subtitle">Seamless user onboarding</p>
+            </div>
+            
+          </div>
+          <div class="tab" data-content="announcements-content">
+            <img
+              class="tab-icon announcement-icon"
+              src="./images/section_two/announcements.svg"
+            />
+            <div class="d-flex flex-column ">
+            <p class="title">Announcements</p>
+            <p class="subtitle">Keep users informed</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="active-tab-content">
+        <div class="feedback-content">
+          <img src="./images/feedbackImage.svg" />
+        </div>
+        <div class="roadmaps-content">
+          <img src="./images/roadmapImage.svg" />
+        </div>
+        <div class="announcements-content">
+          <img src="./images/announcementImage.svg" />
+        </div>
+      </div>
+    </section>
+    <!-- Success Popup Modal -->
+    <!-- Modal                          ("careful1") -->    
+<div id="successModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="icon-container">
+      <img src="/images/successcheck.svg" alt="Success" class="success-icon" />
+    </div>
+    <h2 class="success-title">Thanks! We've got it! 🎉</h2>
+    <p class="success-content">We'll notify you as soon as early access is available. Stay tuned!</p>
+  </div>
+</div>
+
+<!-- CSS for Modal Background -->
+<style>
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 550px;
+    height: 350px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+</style>
+
+<!-- JavaScript to Close Modal -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("successModal");
+    const closeButton = document.querySelector(".close");
+
+    // Function to close modal
+    closeButton.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+
+    // Optional: Close modal when clicking outside modal-content
+    window.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+
+  // Function to show modal (you can call this when form is submitted)
+  function showModal() {
+    document.getElementById("successModal").style.display = "block";
+  }
+</script>
+
+
+    <section class="feature-timeline container" id="features">
+      <div class="content-section">
+        <span>Features</span>
+        <h3 class="content-title">Give Your Users a Voice & Transparency </h3> 
+        <p class="content">Build trust and stronger connections by showing users their feedback drives meaningful changes.</p> 
+      </div>
+      <div class="timeline-container">
+        <!-- Step 1 -->
+        <div class="timeline-item">
+          <div class="timeline-image">
+            <img src="images/feedbackfeatureImg.svg" alt="Feedback Example" />
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-number">1</div>
+            <h3>   Feedback-Transform Ideas Into Impact</h3>
+            <p>Listen to your users and turn their feedback into product improvements that matter. Build stronger connections by solving the problems they care about.</p>
+
+          </div>
+        </div>
+    
+        <!-- Step 2 -->
+        <div class="timeline-item">
+          <div class="timeline-image">
+            <img src="images/roadmapFeatureImg.svg" alt="Roadmap Example" />
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-number two">2</div>
+            <h3>Roadmaps-Keep Everyone Aligned</h3>
+            <p>Inspire trust and clarity by sharing what’s next. Whether public or private, your roadmap keeps teams focused and users engaged</p>
+          
+          </div>
+        </div>
+    
+        <!-- Step 3 -->
+        <div class="timeline-item">
+          <div class="timeline-image">
+            <img src="images/announcementFeatureImg.svg" alt="Announcement Example" />
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-number">3</div>
+            <h3>Announcements-Show Progress, Build Trust</h3>
+            <p>Keep users in the loop with timely updates. Celebrate their feedback by highlighting the changes that make your product better.</p>
+           
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-three container">
+      <div class="content-section">
+        <span>Features</span>
+        <h3 class="content-title">Gain Complete Visibility on Feedback</h3> 
+        <p class="content">See the big picture with all user feedback in one place, enabling smarter decisions and faster action.</p> 
+      </div>
+      <div class="cards-container">
+        <div class="card feature-card" >
+          <h5>AI Chrome Extension</h5>
+          <p>Use Spurvo AI-powered Chrome extension to gather insights from emails, chats, and tools you already use—no feedback gets left behind.</p>
+          <div class="logo-container">
+            <div class="logo-item">
+              <img src="/images/DALL·E 2025-02-01 01.10.04 - A clean and minimalistic AI-powered Chrome extension named Spurvo that gathers insights from emails, chats, and tools. The image should clearly spell .webp" alt="Jira Logo">
+            </div>
+            
+          
+          </div>
+        </div>
+        <div class="card">
+          <h5>Stay Connected with Your Tools</h5>
+          <p>Integrate Spurvo with multiple apps to keep feedback organized and actionable—without disrupting your workflow.</p>
+        
+          <!-- First Row -->
+          <div class="d-flex first-row">
+            <div class="logo-item">
+              <img src="/images/integrations/basecamp.svg" alt="Basecamp Logo">
+            </div>
+            <div class="logo-item">
+              <img src="/images/integrations/clickup.svg" alt="ClickUp Logo">
+            </div>
+          </div>
+        
+          <!-- Second Row -->
+          <div class="d-flex second-row">
+            <div class="logo-item">
+              <img src="/images/integrations/trello.svg" alt="Trello Logo">
+            </div>
+            <div class="logo-item">
+              <img src="/images/integrations/zendesk.svg" alt="Zendesk Logo">
+            </div>
+            <div class="logo-item">
+              <img src="/images/integrations/intercom.svg" alt="Intercom Logo">
+            </div>
+          </div>
+        
+          <!-- Third Row -->
+          <div class="d-flex third-row">
+            <div class="logo-item">
+              <img src="/images/integrations/jira.svg" alt="Jira Logo">
+            </div>
+            <div class="logo-item">
+              <img src="/images/integrations/slack.svg" alt="Slack Logo">
+            </div>
+          </div>
+        
+          <!-- Fourth Row -->
+          <div class="logo-item">
+            <hr>
+            <img src="/images/integrations/pabbly.svg" alt="Pabbly Logo">
+          </div>
+        </div>
+        
+        
+      </div>
+      <div>
+
+     </div>
+    </section>
+    <section class="section-four">
+      <div class="content-section">
+        <span>Features</span>
+        <h3 class="content-title">Ready to Build Products Your Users Love?</h3> 
+        <p class="content">Turn feedback into your competitive edge. Start today and see how effortless it is to engage users, align teams, and deliver impact—faster than ever.
+</p> 
+      </div>
+      <div class="card-container">
+        <div class="card-content">
+          <h1 class="card-title">Join the Waitlist & Shape Spurvo</h1>
+          <p class="card-description">
+            Be part of the journey! Sign up now to influence Spurvo’s development and get early access to the future of smarter feedback management.
+          </p>
+          <button class="cta-button" id="marketingOpenPopup">Get Early Access</button>
+        </div>
+      </div>
+    </section>
+
+<section class="faq-section">
+  <h1 class="faq-title">Frequently Asked Questions</h1>
+  <div class="faq-container">
+    <div class="faq-item">
+      <button class="faq-question" data-target="faq1">
+        <span>Is Spurvo suitable for startups and small teams?</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down icon" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+        </svg>
+      </button>
+      <div class="faq-answer" id="faq1">
+        <p>Absolutely. Spurvo is designed for startups and small teams, offering simple, affordable tools to capture and act on feedback without the complexity or cost of larger platforms.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" data-target="faq2">
+        <span>Can customers simply request anything? What if it’s a junk request?</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down icon" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+        </svg>
+      </button>
+      <div class="faq-answer" id="faq2">
+        <p>Customers can submit any feedback, but Spurvo’s approval flows let you review and filter requests. This ensures only relevant ideas make it to your roadmap, keeping your team focused on what matters.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" data-target="faq3">
+        <span>What if we don’t want the roadmap to be public but maintain it internally?</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down icon" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+        </svg>
+      </button>
+      <div class="faq-answer" id="faq3">
+        <p>Spurvo offers both public and private roadmaps. Share updates with customers while keeping internal strategies private—perfect for aligning your team and engaging users.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" data-target="faq4">
+        <span>What is the price?</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down icon" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+        </svg>
+      </button>
+      <div class="faq-answer" id="faq4">
+        <p>For early users, we’re offering a 40% discount on our Pro plan. Instead of $49/month, you’ll pay just $29/month for the first 6 months—giving you powerful feedback tools at a startup-friendly price.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" data-target="faq5">
+        <span>How can we capture feedback from different sources?</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down icon" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+        </svg>
+      </button>
+      <div class="faq-answer" id="faq5">
+        <p>Spurvo makes it easy with an AI-powered Chrome extension for email, chats, and all the platforms . Plus, integrations to connect with other sources. Capture feedback wherever it happens, all in one place.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+  
+
+
+
+    <footer class="footer">
+      <div class="footer-links">
+        <div class="footer-column first-column" >
+          <img src="images/footerlogo.svg" alt="Spurvo Logo" class="footer-logo " />
+          <!-- <p class="stylish-title">Copy ©2025 Spurvo</p> -->
+          <!-- <p>Join ever-growing community of 100+  product teams who have harnessed the power of  Jimo Insights.</p> -->
+        </div>
+
+        <div class="footer-column">
+          <h4>FEATURES</h4>
+          <ul>
+            <li><a href="#">Product Roadmaps</a></li>
+            <li><a href="#">Announcements</a></li>
+            <li><a href="#">Product Feedback</a></li>
+            <li><a href="#">AI Chrome Extension</a></li>
+            <li><a href="#">Integrations</a></li>
+            <li><a href="/blog" >Spurvo Blog</a></li>
+        </ul>
+        
+        </div>
+        <div class="footer-column">
+          <h4>COMPANY</h4>
+          <ul>
+            <li><a href="#" id="openDemo">Book a Demo</a></li>
+            <li><a href="https://www.linkedin.com/company/spurvo/">LinkedIn</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+
+        <div id="popupOverlay" class="popup-overlay">
+          <div class="demo-popup-content">
+            <!-- Popup Header -->
+            <div class="popup-header">
+              <button id="closeDemo" class="close-button">&times;</button>
+            </div>
+      
+            <!-- Popup Iframe -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/jdabhishek7/spurvo-discovery" style="min-width:320px;height:750px;"></div>
+
+            <!-- <iframe
+              class="popup-iframe"
+              src="https://calendly.com/jdabhishek7/spurvo-discovery"
+              title="Calendly"
+              width="100%"
+              height="100%"
+
+            ></iframe> -->
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>LEGAL</h4>
+          <ul>
+            <li><a href="https://spurvo.com/tnc.html">Terms of Services</a></li>
+            <li><a href="https://spurvo.com/privacy-policy.html
+              ">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+        
+      </div>
+    </footer>
+    <script src="js/index.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8794ZKVNKB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-8794ZKVNKB");
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:5310315,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+  </body>
+</html>
